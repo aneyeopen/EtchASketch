@@ -9,9 +9,15 @@ function makeGrid(rows, cols) {
     for (c = 0; c < (rows * cols); c++) {
         let cell = document.createElement("div");
         cell.innerText = " ";
-        container.appendChild(cell).className = "gridItem";
+        container.appendChild(cell).className = "gridItem unPainted";
+        cell.addEventListener('mouseover', 
+        e => e.target.classList.add('painted'))
     };
   };
 
   makeGrid(gridRow, gridCol);
+
+  
+
+
   
